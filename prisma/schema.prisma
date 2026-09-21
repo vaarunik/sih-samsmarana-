@@ -1,0 +1,136 @@
+// SAMSMARANA — Prisma schema (SQLite)
+// Adapted from the Supabase design in the master spec to the
+// project's Prisma/SQLite environment. Lists are stored as
+// JSON-encoded strings and parsed in application code.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id              String   @id @default(cuid())
+  // ELDER | CAREGIVER | FAMILY
+  role            String   @default("ELDER")
+  name            String
+  age             Int      @default(70)
+  language        String   @default("en")
+  regionGroup     String   @default("South India")
+  regionState     String   @default("Karnataka")
+  // JSON: string[]
+  interests       String   @default("[]")
+  // JSON: string[]
+  preferredActivities String @default("[]")
+  // caregiver connection
+  caregiverName     String?
+  caregiverRelation String?
+  familyName        String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  attempts         Attempt[]
+  reminders        Reminder[]
+  familyMessages   FamilyMessage[]
+  videos           VideoGeneration[]
+  contentHistory   ActivityContentHistory[]
+}
+
+// Per-user 30-day content/stimulus rotation history.
+// Records which stimulus (scene) was shown for which activity type, so the
+// same stimulus is excluded for this user+activity for CONTENT_COOLDOWN_DAYS.
+model ActivityContentHistory {
+  id            String   @id @default(cuid())
+  profileId     String
+  activityType  String   // the cognitive category / activity type
+  stimulusId    String   // the scene/content variant shown
+  shownAt       DateTime @default(now())
+  completedAt   DateTime?
+
+  profile       Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, activityType, shownAt])
+}
+
+model Attempt {
+  id            String   @id @default(cuid())
+  profileId     String
+  activityId    String
+  category      String
+  title         String
+  difficulty    Int      @default(1)
+  accuracy      Float    @default(0)
+  responseMs    Int      @default(0)
+  completed     Boolean  @default(false)
+  skipped       Boolean  @default(false)
+  score         Int      @default(0)
+  // the stimulus (scene) shown for this attempt — supports content rotation
+  stimulusId    String?
+  // offline sync state: synced | pending
+  syncState     String   @default("synced")
+  // idempotency key for offline sync
+  syncId        String   @unique @default(cuid())
+  createdAt     DateTime @default(now())
+
+  profile       Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, createdAt])
+}
+
+model VideoGeneration {
+  id            String   @id @default(cuid())
+  profileId     String
+  activityId    String
+  category      String
+  prompt        String
+  model         String
+  operationId   String?
+  // preparing | generating | ready | failed | unavailable
+  status        String   @default("preparing")
+  videoUrl      String?
+  // JSON: Question[]
+  questions     String   @default("[]")
+  // human-readable, key-safe message (no secrets)
+  message       String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  profile       Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, createdAt])
+}
+
+model Reminder {
+  id         String   @id @default(cuid())
+  profileId  String
+  // medication | appointment | meal | hydration | activity | routine
+  type       String
+  title      String
+  time       String
+  // JSON: string[] (day names)
+  days       String   @default("[]")
+  enabled    Boolean  @default(true)
+  createdAt  DateTime @default(now())
+
+  profile    Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId])
+}
+
+model FamilyMessage {
+  id         String   @id @default(cuid())
+  profileId  String
+  fromName   String
+  // text | voice | photo | clip | occasion | note
+  type       String
+  content    String
+  caption    String?
+  createdAt  DateTime @default(now())
+
+  profile    Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@index([profileId, createdAt])
+}

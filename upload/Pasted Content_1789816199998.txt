@@ -1,0 +1,1770 @@
+SAMSMARANA — MASTER BUILD SPECIFICATION
+========================================
+
+You are rebuilding SAMSMARANA as a polished, functional, production-style prototype.
+
+THIS IS NOT A STATIC UI MOCKUP.
+
+Build a real working web application with:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
+- Supabase Auth
+- Supabase Database
+- Supabase Row Level Security
+- Motion / Motion-Primitives
+- Gemini API with Veo for AI-generated cognitive videos
+- IndexedDB or another proper browser database for offline-first functionality
+
+============================================================
+0. FIRST: UNDERSTAND THE PRODUCT
+============================================================
+
+Product:
+
+SAMSMARANA
+
+Tagline:
+
+MEMORY & COGNITIVE ENGAGEMENT
+
+Core idea:
+
+Samsmarana is a personalized, culturally familiar, adaptive cognitive engagement and caregiver/family-support platform for older adults.
+
+The system combines:
+
+PERSONALIZATION
++
+REGIONAL/CULTURAL FAMILIARITY
++
+ADAPTIVE COGNITIVE ACTIVITIES
++
+OFFLINE-FIRST FUNCTIONALITY
++
+AI-GENERATED COGNITIVE VIDEO
++
+CAREGIVER SUPPORT
++
+FAMILY ENGAGEMENT
+
+The North Eastern Region of India is an important target context for the SIH problem.
+
+============================================================
+1. ABSOLUTELY NO CARTOONISH / CHILDISH DESIGN
+============================================================
+
+THIS IS NON-NEGOTIABLE.
+
+The previous implementation became too cartoonish.
+
+DO NOT repeat that.
+
+The entire application must look:
+
+REALISTIC
+PREMIUM
+CALM
+HUMAN
+MATURE
+TRUSTWORTHY
+HEALTHCARE-ADJACENT
+MODERN
+CULTURALLY RESPECTFUL
+
+NOT:
+
+- cartoonish
+- childish
+- anime
+- comic-book style
+- playful children's-app style
+- exaggerated illustrations
+- random blobs everywhere
+- neon gradients
+- excessive glassmorphism
+- generic AI SaaS dashboard
+- gaming UI
+- random floating emojis
+- random cartoon elderly people
+- fake medical imagery
+- cheesy stock-photo healthcare aesthetic
+
+The target visual quality should feel closer to a premium modern wellness/productivity platform than a children's cognitive game.
+
+============================================================
+2. REALISTIC VISUAL LANGUAGE
+============================================================
+
+If people are shown:
+
+Use realistic photography or tasteful realistic imagery.
+
+Do NOT use:
+
+- cartoon elderly characters
+- illustrated grandmothers
+- AI-looking portraits staring at the camera
+- random unrelated elderly stock photos
+
+The hero visual must communicate:
+
+elder
++
+memory
++
+familiarity
++
+technology
++
+human connection
+
+NOT simply:
+
+"random old person = elderly app"
+
+If a hero image is used, it should show a meaningful context such as:
+
+- elder interacting with a tablet
+- elder looking at familiar photographs
+- elder in a realistic home/garden environment
+- elder interacting with family
+- elder engaging with a familiar activity
+
+Use tasteful cropping and composition.
+
+============================================================
+3. DESIGN SYSTEM
+============================================================
+
+Primary visual direction:
+
+GREEN + BLUE
+
+Use shades such as:
+
+- deep forest green
+- emerald
+- muted teal
+- soft mint
+- deep navy
+- muted blue
+- pale blue
+- warm white
+- soft gray
+
+Avoid:
+
+- neon green
+- neon blue
+- purple-heavy gradients
+- pink-heavy gradients
+- rainbow gradients
+- overly saturated colors
+
+The interface should feel:
+
+calm
+natural
+safe
+premium
+accessible
+
+Use green primarily for action/success/brand identity.
+
+Use blue for information, trust and supporting UI.
+
+============================================================
+4. USE MOTION-PRIMITIVES
+============================================================
+
+Use the Motion-Primitives website as the reference for animation quality and component patterns:
+
+https://motion-primitives.com/
+
+Do not randomly invent flashy animations.
+
+Use appropriate Motion-Primitives components/patterns such as:
+
+- AnimatedGroup
+- InView
+- TextEffect
+- GlowEffect where genuinely appropriate
+
+Use Motion-Primitives to make the interface feel alive while remaining mature and calm.
+
+Animation principles:
+
+SUBTLE
+SMOOTH
+PURPOSEFUL
+ACCESSIBLE
+
+Good examples:
+
+- fade-in
+- slight upward movement
+- staggered section reveal
+- gentle scale
+- subtle hover elevation
+- soft focus transitions
+
+Bad examples:
+
+- bouncing cards
+- spinning elements
+- excessive parallax
+- flashing
+- rapid movement
+- game-like transitions
+- exaggerated spring effects
+
+Respect:
+
+prefers-reduced-motion
+
+If reduced motion is enabled, simplify/disable nonessential animations.
+
+============================================================
+5. HAIKEI — ONLY IF NEEDED
+============================================================
+
+If the visual background needs additional depth and Motion-Primitives alone does not provide the desired visual polish, use Haikei:
+
+https://haikei.app/
+
+Prefer a subtle:
+
+- Layered Waves
+OR
+- Blob Scene
+OR
+- Blurry Gradient
+
+style.
+
+Use only very subtle green/blue tones.
+
+Do NOT cover the UI with giant decorative blobs.
+
+Do NOT make the app look like a design-tool demo.
+
+Haikei should be a supporting visual layer, NOT the main design.
+
+If the design already looks better without Haikei, do not force it.
+
+============================================================
+6. LANDING PAGE
+============================================================
+
+Create a beautiful premium landing page.
+
+Hero:
+
+SAMSMARANA
+MEMORY & COGNITIVE ENGAGEMENT
+
+Headline:
+
+"Memories deserve to be nurtured."
+
+Supporting text:
+
+"Samsmarana creates personalized, culturally familiar activities that help older adults stay engaged, connected and curious."
+
+Buttons:
+
+Get Started
+Explore Samsmarana
+
+Hero composition:
+
+LEFT:
+headline
+supporting copy
+CTAs
+
+RIGHT:
+realistic meaningful visual showing elderly engagement/memory/family context
+
+Do NOT use a random elderly portrait.
+
+============================================================
+7. LANDING PAGE ANIMATION
+============================================================
+
+On initial load:
+
+Brand/header:
+subtle fade
+
+Headline:
+gentle text reveal
+
+Supporting text:
+staggered fade
+
+CTA:
+slight delayed reveal
+
+Hero visual:
+fade + subtle upward movement + very slight scale
+
+Below-the-fold sections:
+
+Use InView / AnimatedGroup style reveals.
+
+Cards:
+
+subtle hover elevation
+
+Do NOT make cards bounce.
+
+============================================================
+8. LANDING PAGE SECTIONS
+============================================================
+
+Include:
+
+How Samsmarana Works
+
+Personalized Cognitive Activities
+
+Regional & Cultural Personalization
+
+Adaptive Experiences
+
+AI-Powered Cognitive Video
+
+Offline-First Support
+
+Caregiver Support
+
+Family Engagement
+
+Privacy & Security
+
+Proposed Validation
+
+Roadmap
+
+Healthcare / Institution
+
+Keep the existing navigation:
+
+Privacy & Security
+Proposed Validation
+Roadmap
+Healthcare / Institution
+
+Make these actually scroll/navigate to the relevant sections.
+
+============================================================
+9. IMPORTANT FEATURE STATUS
+============================================================
+
+ACTIVE NOW:
+
+✓ Elder onboarding
+✓ Caregiver onboarding
+✓ Elder Mode
+✓ Caregiver Mode
+✓ Role switching
+✓ Back navigation
+✓ Adaptive cognitive activities
+✓ Recognition
+✓ Recall
+✓ Attention
+✓ Counting
+✓ Problem solving
+✓ Sequencing
+✓ Language activities
+✓ Concentration
+✓ Spatial awareness
+✓ Regional personalization
+✓ NER personalization
+✓ English
+✓ Kannada
+✓ Hindi
+✓ Tamil
+✓ Telugu
+✓ Supabase
+✓ Authentication
+✓ Offline-first
+✓ Offline persistence
+✓ Offline sync
+✓ Reminders
+✓ Activity history
+✓ Performance tracking
+✓ Caregiver insights
+✓ AI personalized video
+✓ Gemini/Veo integration
+✓ Family Engagement dashboard
+✓ Gamification
+✓ Privacy/security
+✓ Proposed validation
+
+UPCOMING:
+
+◷ Music & Familiar Stimuli
+◷ Familiar songs
+◷ Nature sounds
+◷ Regional music
+◷ Everyday/familiar sounds
+
+FUTURE / UPCOMING:
+
+◷ Healthcare / Institutional Dashboard
+◷ Elder-care centre deployment
+◷ Hospital/NGO integrations
+◷ Institutional workflows
+
+IMPORTANT:
+
+Do NOT accidentally implement or present upcoming features as currently completed.
+
+============================================================
+10. TWO PRIMARY INTERFACES
+============================================================
+
+The application has two primary interfaces:
+
+1. ELDER MODE
+2. CAREGIVER MODE
+
+There must also be:
+
+3. FAMILY ENGAGEMENT
+
+Family Engagement is an ACTIVE feature but is conceptually separate from caregiver performance analytics.
+
+============================================================
+11. ELDER MODE
+============================================================
+
+Elder Mode must be extremely simple.
+
+Use:
+
+- large typography
+- large touch targets
+- high contrast
+- minimal text
+- simple navigation
+- large cards
+- clear icons
+- generous spacing
+
+Main navigation:
+
+Home
+Activities
+Reminders
+Progress
+Profile
+
+The home screen should answer:
+
+"What can I do now?"
+
+============================================================
+12. CAREGIVER MODE
+============================================================
+
+Caregiver dashboard:
+
+Overview
+Activity History
+Performance
+Trends
+Recommendations
+Reminders
+Elder Profile
+Family Engagement
+Settings
+
+Show:
+
+- completed activities
+- missed activities
+- accuracy
+- response time
+- completion
+- activity type
+- difficulty
+- recent trends
+- pending reminders
+- offline sync status
+
+Do not overload the dashboard with unnecessary charts.
+
+============================================================
+13. SWITCH BETWEEN ELDER AND CAREGIVER
+============================================================
+
+THIS IS REQUIRED.
+
+If the authenticated account has appropriate permissions:
+
+Provide:
+
+Switch to Caregiver
+
+and:
+
+Switch to Elder Mode
+
+The user must NOT have to log out.
+
+Example:
+
+Current mode:
+ELDER
+
+[Switch to Caregiver]
+
+Caregiver mode:
+
+Current mode:
+CAREGIVER
+
+[Switch to Elder Mode]
+
+Use role/permission checks.
+
+Do not expose caregiver information to unauthorized users.
+
+============================================================
+14. BACK BUTTON — REQUIRED EVERYWHERE
+============================================================
+
+Every secondary page must have an obvious visible back button.
+
+Examples:
+
+← Back
+
+← Back to Activities
+
+← Back to Dashboard
+
+← Back to Profile
+
+← Back to Language
+
+← Back to Region
+
+← Back to Video Activity
+
+Do NOT rely only on browser back.
+
+Do NOT create dead-end screens.
+
+Use proper routing/history.
+
+On mobile, the back button must remain easy to access.
+
+============================================================
+15. ONBOARDING
+============================================================
+
+Multi-step onboarding:
+
+1. Name
+2. Age
+3. Language
+4. Region / State
+5. Interests
+6. Preferred activity types
+7. Caregiver connection
+8. Confirmation
+
+Every step:
+
+Back
+Continue
+
+Show:
+
+Step X of 8
+
+Do not make onboarding overwhelming.
+
+============================================================
+16. LANGUAGE
+============================================================
+
+KEEP:
+
+English
+Kannada
+Hindi
+Tamil
+Telugu
+
+DO NOT REMOVE THEM.
+
+Language and region are independent.
+
+Example:
+
+Assam + English
+Assam + Hindi
+Karnataka + Hindi
+Karnataka + Kannada
+
+are all valid.
+
+If browser/device locale is used:
+
+ONLY use it as a suggestion.
+
+Example:
+
+"English is suggested based on your device."
+
+[Use English]
+
+[Choose another language]
+
+Never silently override the user's choice.
+
+============================================================
+17. NORTH EASTERN REGION
+============================================================
+
+NER IS A CORE REQUIREMENT.
+
+North Eastern Region states:
+
+Assam
+Arunachal Pradesh
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Sikkim
+Tripura
+
+Onboarding should allow:
+
+Region:
+North Eastern Region
+
+State:
+Assam
+
+Language:
+English
+
+Store separately:
+
+region_group
+region_state
+language
+
+Example:
+
+region_group = North Eastern Region
+region_state = Assam
+language = English
+
+Do NOT store only:
+
+region = India
+
+============================================================
+18. REGIONAL PERSONALIZATION
+============================================================
+
+Region must actually influence activities.
+
+Personalization inputs:
+
+Language
+Region
+State
+Interests
+Familiarity
+Activity history
+Accuracy
+Response time
+Completion
+Difficulty
+
+Regional context can influence:
+
+- objects
+- everyday environments
+- nature
+- food
+- markets
+- occupations
+- storytelling
+- visual settings
+- names
+- language
+
+Do NOT stereotype.
+
+Do NOT turn every regional video into tourism content.
+
+The purpose is familiarity.
+
+============================================================
+19. COGNITIVE ACTIVITIES
+============================================================
+
+Active categories:
+
+Recognition
+Recall
+Attention
+Counting
+Problem Solving
+Sequencing
+Language
+Concentration
+Spatial Awareness
+
+Examples:
+
+Recognition:
+"Which object did you see?"
+
+Recall:
+"Which object appeared first?"
+
+Attention:
+"How many red objects were visible?"
+
+Sequencing:
+"What happened next?"
+
+Spatial:
+"Where was the cup?"
+
+Counting:
+"How many flowers were there?"
+
+============================================================
+20. ADAPTIVE ENGINE
+============================================================
+
+Use:
+
+Accuracy
+Response time
+Completion
+Skipped activity
+Recent performance
+Activity type
+Difficulty
+
+Rules:
+
+Strong performance
+→ slightly increase difficulty
+
+Stable
+→ maintain
+
+Repeated difficulty
+→ simplify
+
+Repeated skips
+→ reduce recommendation frequency / offer another activity
+
+Changes must be gradual.
+
+============================================================
+21. AI VIDEO — GEMINI / VEO
+============================================================
+
+AI-generated cognitive video is an ACTIVE feature.
+
+Use Google's Gemini API with Veo.
+
+Gemini API is the platform.
+
+Veo is the video generation model.
+
+Use a current supported Veo model via environment configuration.
+
+API key MUST remain server-side.
+
+Never expose the key in client code.
+
+Architecture:
+
+Elder Profile
+↓
+Language
+↓
+Region
+↓
+Interests
+↓
+Activity
+↓
+Performance
+↓
+Difficulty
+↓
+Personalization Engine
+↓
+Video Specification
+↓
+Prompt Builder
+↓
+Gemini/Veo
+↓
+Async Generation
+↓
+Polling
+↓
+Actual video
+↓
+Activity Player
+↓
+Questions
+↓
+Performance
+↓
+Adaptive Engine
+
+============================================================
+22. AI VIDEO EXAMPLES
+============================================================
+
+Possible scenes:
+
+- garden
+- vegetable market
+- local shop
+- cooking
+- tea preparation
+- train journey
+- nature
+- birds
+- familiar home
+- community environment
+- everyday household scene
+
+Video:
+
+Vegetable market
+
+Then ask:
+
+"How many people did you see?"
+
+"What colour was the shopkeeper's shirt?"
+
+"Which vegetable appeared first?"
+
+"Where was the basket?"
+
+Record:
+
+accuracy
+response time
+completion
+difficulty
+
+The video must create a cognitive interaction.
+
+============================================================
+23. AI VIDEO STYLE
+============================================================
+
+Videos must be:
+
+REALISTIC
+CALM
+CLEAR
+SLOW-PACED
+WARM
+CULTURALLY FAMILIAR
+ELDER-FRIENDLY
+
+Do NOT generate:
+
+- cartoons
+- anime
+- exaggerated 3D
+- childish animation
+- surreal visuals
+- rapid camera movements
+- flashing
+- chaotic scenes
+- random elderly portraits
+
+============================================================
+24. ON-DEMAND AI VIDEO
+============================================================
+
+Do not generate video automatically for every activity.
+
+Provide:
+
+Generate Personalized Video
+
+Show:
+
+Preparing...
+Generating...
+Almost ready...
+
+Only show the video when an actual successful video exists.
+
+If generation fails:
+
+"Video generation is temporarily unavailable. You can continue with a standard activity."
+
+Never show:
+
+- fake MP4
+- SVG
+- random placeholder
+- broken image
+- raw API error
+- raw provider JSON
+- Chinese fallback text
+
+============================================================
+25. OFFLINE-FIRST — REAL IMPLEMENTATION
+============================================================
+
+OFFLINE IS AN ACTIVE CORE FEATURE.
+
+The app must continue working when internet is unavailable.
+
+Offline:
+
+- activities
+- scoring
+- questions
+- basic personalization
+- reminders
+- local history
+- downloaded/generated videos
+
+Use IndexedDB or another appropriate browser database.
+
+Do not rely on localStorage for the entire offline data layer.
+
+============================================================
+26. OFFLINE SYNC
+============================================================
+
+Actual flow:
+
+User goes offline
+↓
+Completes activity
+↓
+Record saved locally
+↓
+Record marked pending_sync
+↓
+Internet returns
+↓
+Sync queue starts
+↓
+Supabase
+↓
+Record marked synced
+
+UI status:
+
+● Offline
+
+● Syncing...
+
+✓ Synced
+
+If sync fails:
+
+"Sync pending. We'll retry when you're connected."
+
+Do not lose records.
+
+Use idempotent sync IDs to avoid duplicates.
+
+============================================================
+27. OFFLINE VIDEO
+============================================================
+
+Previously generated/downloaded videos can be available offline.
+
+New AI video generation requires internet.
+
+Clearly distinguish:
+
+Available Offline
+
+vs.
+
+Requires Internet
+
+============================================================
+28. REMINDERS
+============================================================
+
+Active:
+
+Medication reminders
+Appointment reminders
+Meal reminders
+Hydration reminders
+Activity reminders
+Routine reminders
+
+These are reminders only.
+
+Do not make medical decisions.
+
+============================================================
+29. FAMILY ENGAGEMENT — ACTIVE
+============================================================
+
+Create a separate Family Engagement dashboard.
+
+This is NOT the same as caregiver analytics.
+
+Features:
+
+Family Messages
+Voice Messages
+Familiar Photos
+Short Family Clips
+Birthday / Occasion Messages
+Shared Memories
+Family Notes
+Family Moments
+
+Design this area warmly.
+
+Example sections:
+
+"Messages from Family"
+
+"Shared Memories"
+
+"Family Moments"
+
+"Voice Messages"
+
+"Upcoming Occasions"
+
+Use role-based access.
+
+Do not expose sensitive caregiver performance information to family members automatically.
+
+============================================================
+30. MUSIC & FAMILIAR STIMULI — UPCOMING
+============================================================
+
+Do NOT build this as an active feature.
+
+Show it under:
+
+Coming Soon
+
+Music & Familiar Stimuli
+
+Potential future content:
+
+- familiar songs
+- nature sounds
+- regional music
+- everyday sounds
+
+Clearly label:
+
+UPCOMING
+
+============================================================
+31. HEALTHCARE / INSTITUTION — UPCOMING
+============================================================
+
+Do NOT build this as an active feature.
+
+Show:
+
+Future — Healthcare / Institution
+
+Potential future:
+
+- hospitals
+- NGOs
+- elder-care centres
+- community health programmes
+- institutional dashboards
+- multiple elder management
+- aggregated activity data
+
+Clearly label:
+
+UPCOMING
+
+============================================================
+32. LONGITUDINAL PERFORMANCE
+============================================================
+
+Track:
+
+Daily
+7-day
+30-day
+Longer-term
+
+Metrics:
+
+Accuracy
+Response time
+Completion
+Difficulty
+Activity type
+Engagement
+
+Use factual language.
+
+Example:
+
+"Average response time increased over the last 7 sessions."
+
+NOT:
+
+"Dementia is worsening."
+
+============================================================
+33. CAREGIVER INSIGHTS
+============================================================
+
+Examples:
+
+"Activity missed today."
+
+"Repeated difficulty observed in recent recall activities."
+
+"Activity completion increased this week."
+
+"Response time increased across recent sessions."
+
+"Offline activity data is waiting to sync."
+
+These are observations.
+
+No diagnosis.
+
+============================================================
+34. GAMIFICATION
+============================================================
+
+Active but gentle.
+
+Use:
+
+Daily streak
+Milestones
+Completion badges
+Progress
+Encouraging messages
+
+Avoid aggressive competition.
+
+============================================================
+35. SUPABASE — REAL BACKEND
+============================================================
+
+Integrate Supabase properly.
+
+Use it for:
+
+Authentication
+Profiles
+Roles
+Elder profiles
+Caregiver relationships
+Family relationships
+Activities
+Activity attempts
+Performance
+Recommendations
+Reminders
+Family messages
+Family media
+Sync metadata
+
+Suggested tables:
+
+profiles
+elder_profiles
+caregiver_relationships
+family_relationships
+activities
+activity_attempts
+recommendations
+reminders
+family_messages
+family_media
+sync_records
+
+Use proper foreign keys.
+
+Use timestamps.
+
+Use UUIDs.
+
+Use Row Level Security.
+
+============================================================
+36. GIVE THE PROJECT OWNER DATABASE ACCESS
+============================================================
+
+IMPORTANT.
+
+The project owner/user needs actual access to the Supabase database.
+
+Do NOT hide the database setup inside the code.
+
+Create:
+
+/supabase/migrations/
+
+with proper SQL migrations.
+
+Create:
+
+/supabase/seed.sql
+
+or equivalent seed process.
+
+Create:
+
+.env.example
+
+containing the required variables WITHOUT real secrets.
+
+Include clear setup documentation:
+
+SUPABASE SETUP
+
+1. Create/open the Supabase project.
+2. Where to find Project URL.
+3. Where to find the public anon/publishable key.
+4. Where to run SQL migrations.
+5. Where to view Tables.
+6. Where to view Authentication users.
+7. Where to inspect Row Level Security policies.
+8. How to seed demo data.
+9. How to connect the local app.
+
+Also provide the Supabase project/dashboard URL or project reference once the project is actually created/configured.
+
+IMPORTANT SECURITY RULE:
+
+NEVER expose:
+
+SUPABASE_SERVICE_ROLE_KEY
+
+in frontend code.
+
+NEVER commit real API keys into GitHub.
+
+The owner should have access to the Supabase dashboard through their own Supabase account.
+
+Do not create a secret account or hide credentials from the owner.
+
+============================================================
+37. SUPABASE AUTH
+============================================================
+
+Use Supabase Auth.
+
+Do NOT create:
+
+custom password hashing
+parallel authentication
+homemade password database
+duplicate session system
+
+Use Supabase Auth properly.
+
+Support:
+
+Sign up
+Sign in
+Sign out
+Persistent session
+Role-aware routing
+
+============================================================
+38. ROLE PERMISSIONS
+============================================================
+
+Roles:
+
+ELDER
+CAREGIVER
+FAMILY
+
+Elder:
+
+Own profile
+Activities
+Reminders
+Progress
+
+Caregiver:
+
+Authorized elder information
+Activity history
+Performance
+Reminders
+Recommendations
+Family engagement
+
+Family:
+
+Family engagement
+Shared memories
+Messages
+Authorized content
+
+Use Supabase RLS.
+
+============================================================
+39. SECURITY
+============================================================
+
+Implement:
+
+Supabase RLS
+Secure server APIs
+Server-side Gemini API key
+Role-based permissions
+Minimal personal data
+Secure sync
+No service-role key client-side
+
+============================================================
+40. I18N
+============================================================
+
+Proper translation architecture.
+
+Never show:
+
+drill.recognise.label
+
+Never show:
+
+undefined
+
+Never show:
+
+null
+
+Never show:
+
+raw translation keys
+
+Fallback missing translations to English.
+
+============================================================
+41. ERROR HANDLING
+============================================================
+
+Never show raw:
+
+stack traces
+API responses
+JSON
+provider errors
+SVG fallback
+Chinese fallback text
+
+Use human-readable messages.
+
+============================================================
+42. ELDER ACCESSIBILITY
+============================================================
+
+Large text.
+
+Large buttons.
+
+Large touch targets.
+
+High contrast.
+
+Clear labels.
+
+Readable line height.
+
+Simple layouts.
+
+Visible back buttons.
+
+No tiny controls.
+
+No icon-only controls when unclear.
+
+============================================================
+43. RESPONSIVE
+============================================================
+
+Desktop
+Tablet
+Mobile
+
+Must work properly.
+
+No:
+
+horizontal overflow
+clipped text
+overlapping cards
+broken nav
+tiny buttons
+
+============================================================
+44. DEMO PROFILES
+============================================================
+
+Create:
+
+DEMO 1
+
+Lakshmi
+Age: 72
+Region: Karnataka
+Language: Kannada
+Interests:
+Gardening
+Cooking
+Music
+
+DEMO 2
+
+Anima
+Age: 70
+Region: Assam
+Region Group: North Eastern Region
+Language: English
+Interests:
+Gardening
+Stories
+Music
+
+Keep both.
+
+The Assam profile is important for SIH demonstration.
+
+============================================================
+45. COMPLETE JUDGE DEMO FLOW
+============================================================
+
+Judge should be able to:
+
+Landing Page
+↓
+Get Started
+↓
+Language
+↓
+Region
+↓
+Interests
+↓
+Profile
+↓
+Elder Dashboard
+↓
+Recommended Activity
+↓
+Complete Activity
+↓
+Performance Recorded
+↓
+Adaptive Recommendation
+↓
+Generate Personalized Video
+↓
+Watch Video
+↓
+Answer Questions
+↓
+Performance Recorded
+↓
+Switch to Caregiver
+↓
+Caregiver Dashboard
+↓
+View Performance
+↓
+View Activity History
+↓
+View Reminders
+↓
+Family Engagement
+↓
+Simulate Offline
+↓
+Complete Activity Offline
+↓
+Reconnect
+↓
+Sync
+↓
+Caregiver sees synced record
+
+THIS JOURNEY MUST ACTUALLY WORK.
+
+============================================================
+46. OFFLINE DEMO MODE
+============================================================
+
+Add an optional developer/demo control:
+
+Simulate Offline
+
+When enabled:
+
+- app behaves as offline
+- activities remain usable
+- local records are created
+- sync queue updates
+- cloud-only features show appropriate messaging
+
+When connectivity returns:
+
+Syncing...
+↓
+Synced
+
+This must use the actual local persistence + sync architecture.
+
+Do not fake the UI only.
+
+============================================================
+47. LANDING PAGE — INFORMATIONAL CONTENT
+============================================================
+
+Keep:
+
+Privacy & Security
+Proposed Validation
+Roadmap
+Healthcare / Institution
+
+Also explain offline-first correctly:
+
+"Core activities remain available offline, while activity records created without connectivity are securely synchronized with the backend when a connection returns."
+
+Do NOT say:
+
+"Your data never leaves your device."
+
+because Supabase sync exists.
+
+============================================================
+48. DESIGN QUALITY CHECK
+============================================================
+
+Before finishing, inspect every major page visually.
+
+Ask:
+
+Does this look like a real premium product?
+
+Does it look mature?
+
+Does it look appropriate for older adults?
+
+Does it look culturally respectful?
+
+Does it look realistic?
+
+Does it avoid childish/cartoon styling?
+
+Does the green/blue palette feel coherent?
+
+Are animations subtle?
+
+Is there enough whitespace?
+
+Are typography and hierarchy strong?
+
+Are cards being overused?
+
+Is there visual consistency?
+
+If any page looks like a generic AI-generated dashboard, redesign it.
+
+============================================================
+49. NO RANDOM VISUALS
+============================================================
+
+Every visual must have a reason.
+
+DO NOT add:
+
+random elderly people
+random doctors
+random hospital imagery
+random cartoon characters
+random AI faces
+random decorative illustrations
+
+The visual system should support the product story.
+
+============================================================
+50. BUILD VERIFICATION
+============================================================
+
+After implementation:
+
+Run:
+
+TypeScript check
+ESLint
+Production build
+
+Then manually test in browser.
+
+Check:
+
+- landing page
+- onboarding
+- language
+- region
+- NER
+- elder mode
+- caregiver mode
+- family engagement
+- role switching
+- back buttons
+- activities
+- adaptive logic
+- offline mode
+- offline persistence
+- sync
+- Supabase
+- authentication
+- RLS
+- reminders
+- Gemini/Veo
+- video generation
+- video failure fallback
+- translations
+- responsive mobile UI
+- animations
+- reduced motion
+
+Fix ALL console errors.
+
+Do not report success just because the project compiles.
+
+============================================================
+51. FINAL NON-NEGOTIABLE RULES
+============================================================
+
+DO NOT:
+
+- make the UI cartoonish
+- use childish illustrations
+- use random elderly portraits
+- remove existing languages
+- remove NER
+- remove offline functionality
+- fake offline sync
+- fake Gemini video
+- fake Supabase
+- remove caregiver mode
+- remove elder mode
+- remove family engagement
+- remove back buttons
+- create dead-end pages
+- expose API keys
+- expose Supabase service-role key
+- create custom password authentication
+- show raw API errors
+- show raw translation keys
+- turn Music into an active feature
+- turn Institutional Dashboard into an active feature
+- make medical claims
+- claim diagnosis
+- claim treatment
+- claim dementia progression
+
+DO:
+
+- build a real functional product
+- use Supabase
+- use proper RLS
+- implement actual offline persistence
+- implement actual sync
+- implement real role switching
+- implement visible back navigation
+- implement NER properly
+- preserve all current languages
+- integrate Gemini/Veo server-side
+- create realistic video experiences
+- create a separate Family Engagement dashboard
+- keep Music & Familiar Stimuli as UPCOMING
+- keep Healthcare / Institutional Dashboard as UPCOMING
+- use Motion-Primitives for polished motion
+- use Haikei only when it improves the design
+- use green and blue shades
+- make the interface mature and realistic
+- make the product elderly-friendly
+- make the product culturally respectful
+- make the database accessible to the project owner through Supabase
+- provide migrations and seed data
+- provide .env.example
+- verify everything in the browser
+
+============================================================
+52. FINAL PRODUCT IDENTITY
+============================================================
+
+Samsmarana should feel like:
+
+A calm, premium, human-centered platform that helps older adults stay engaged through familiar experiences while giving caregivers meaningful, non-diagnostic visibility and helping families stay connected.
+
+The product story is:
+
+WHO IS THE ELDER?
+↓
+WHERE ARE THEY FROM?
+↓
+WHAT LANGUAGE DO THEY PREFER?
+↓
+WHAT ARE THEY FAMILIAR WITH?
+↓
+WHAT DO THEY ENJOY?
+↓
+HOW HAVE THEY PERFORMED?
+↓
+WHAT SHOULD THEY DO NEXT?
+↓
+CAN THEY USE IT OFFLINE?
+↓
+CAN THEIR DATA SYNC SAFELY?
+↓
+WHAT CAN THE CAREGIVER OBSERVE?
+↓
+HOW CAN FAMILY STAY CONNECTED?
+
+Build EVERYTHING around this story.
+
+DO NOT STOP AT A STATIC MOCKUP.
+
+BUILD THE ACTUAL FUNCTIONAL SAMSMARANA PROTOTYPE.
